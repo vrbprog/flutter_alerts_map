@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_alerts_map/router/router_names.dart';
 import 'package:flutter_alerts_map/widgets/home_screen_card.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,8 +29,14 @@ class HomeScreen extends StatelessWidget {
                 spacing: 8,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  HomeScreenCard(type: HomeCardType.map, onTap: () => ()),
-                  HomeScreenCard(type: HomeCardType.region, onTap: () => ()),
+                  HomeScreenCard(
+                    type: HomeCardType.map,
+                    onTap: () => context.goNamed(RouteNames.alertsMap.name),
+                  ),
+                  HomeScreenCard(
+                    type: HomeCardType.region,
+                    onTap: () => context.goNamed(RouteNames.regionAlerts.name),
+                  ),
                 ],
               ),
             ),

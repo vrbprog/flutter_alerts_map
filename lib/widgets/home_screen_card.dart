@@ -18,7 +18,7 @@ class HomeScreenCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(type.iconName, width: 22, height: 22),
+              Image.asset(type.iconName, width: 20, height: 20),
               const SizedBox(width: 12),
               Text(
                 type.cardName,

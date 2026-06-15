@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_alerts_map/screens/home_screen.dart';
-
+import 'package:flutter_alerts_map/router/app_router.dart';
 void main() {
   runApp(const AlertsMapOfUkraine());
 }
@@ -10,9 +9,9 @@ class AlertsMapOfUkraine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      routerConfig: router,
     );
   }
 }
